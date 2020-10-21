@@ -16,11 +16,12 @@
         android:layout_height="wrap_content">
 
         <CheckBox
+            android:buttonTint="@color/appTextColor"
             android:id="@+id/cb_taskItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="18dp"
-            android:text="abc" />
+            android:textColor="@color/appTextColor"
+            android:padding="18dp" />
     </LinearLayout>
 
 

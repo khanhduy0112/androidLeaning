@@ -51,13 +51,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
         if (holder.getAdapterPosition() > lastPosition) {
             Animation animation = AnimationUtils.loadAnimation(context, R.anim.slide_in_row);
             holder.cb_item.startAnimation(animation);
-            holder.cb_item.setTextColor(R.color.appColorWhite);
+
             if (position % 2 == 0) {
                 holder.cb_item.setBackgroundResource(R.color.appItemBg1);
             } else {
                 holder.cb_item.setBackgroundResource(R.color.appItemBg2);
             }
-
             holder.cb_item.setText(tasks.get(position).getContent());
             holder.cb_item.setChecked(tasks.get(position).getStatus() == 1 ? true : false);
             holder.cb_item.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +68,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
                 }
             });
             lastPosition = holder.getAdapterPosition();
+
         }
 
 
